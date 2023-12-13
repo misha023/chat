@@ -86,14 +86,18 @@ main.message-container {
     flex-direction: column;
     grid-gap: 10px;
     & .message {
-        width: max-content;
-        padding: 15px;
-        background-color: #eeeeee;
-        border-radius: 0 10px 10px 10px;
+        width: 100%;
+        display: flex;
         & .text {
+            width: max-content;
+            padding: 15px;
+            border-radius: 0 10px 10px 10px;
+            background-color: #eeeeee;
             font-size: 14px;
             font-weight: 400;
         }
+        &.your-message {justify-content: flex-start;}
+        &.my-message {justify-content: flex-end;}
     }
 }
 
