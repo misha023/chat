@@ -97,7 +97,7 @@ main.message-container {
             font-weight: 400;
         }
         &.your-message {justify-content: flex-start;}
-        &.my-message {justify-content: flex-end;}
+        &.my-message {justify-content: flex-end; & .text {border-radius: 10px 0 10px 10px}}
     }
 }
 
