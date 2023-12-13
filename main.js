@@ -1,5 +1,7 @@
 const messageSend = document.querySelector(".message-send")
-messageSend.addEventListener("click", () => {
+messageSend.addEventListener("click", () => sendMessage())
+
+function sendMessage() {
     const messageBlock = document.querySelector(".message-block")
     const messageInput = document.querySelector(".message-input")
     const message = messageInput.value
@@ -9,4 +11,10 @@ messageSend.addEventListener("click", () => {
     </div>`)
     messageInput.value && messageBlock.appendChild(messageHtml)
     messageInput.value = ""
+}
+
+document.addEventListener("keydown", event => {
+    if (event.key == "Enter") {
+        sendMessage()
+    }
 })
