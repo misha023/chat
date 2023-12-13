@@ -6,7 +6,7 @@ function sendMessage() {
     const messageInput = document.querySelector(".message-input")
     const message = messageInput.value
     const messageHtml = document.createRange().createContextualFragment(`
-    <div class="message">
+    <div class="message my-message">
         <h5 class="text">${message}</h5>
     </div>`)
     messageInput.value && messageBlock.appendChild(messageHtml)
