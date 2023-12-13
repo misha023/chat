@@ -18,3 +18,14 @@ document.addEventListener("keydown", event => {
         sendMessage()
     }
 })
+
+const userButtons = document.querySelectorAll(".chat-container .chat-link")
+userButtons.forEach((element) => {
+    element.addEventListener("click", (element) => {
+        const userName = element.target.querySelector(".chat-name").innerText
+        const userLogoSrc = element.target.querySelector(".chat-logo").getAttribute("src")
+        const messageUserBlock = document.querySelector(".message-container .user-block")
+        messageUserBlock.querySelector(".user-logo").setAttribute("src", userLogoSrc)
+        messageUserBlock.querySelector(".user-name").innerText = userName
+    })
+})
